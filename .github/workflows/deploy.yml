@@ -37,7 +37,7 @@ jobs:
       - name: Build Web Distribution
         run: |
           cd renpy-8.2.3-sdk
-          ./renpy.sh ../ launcher web_build ../web-build --dest ../web-dist
+          ./renpy.sh launcher web_build ../ --dest ../web-dist
           
       - name: Prepare Web Root
         run: |
