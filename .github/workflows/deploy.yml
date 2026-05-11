@@ -22,27 +22,19 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Build Ren'Py Game
+        id: build
+        uses: ProjectAliceDev/renpy-build-action@master
         with:
-          python-version: '3.10'
+          sdk-version: '8.2.3'
+          project-dir: '.'
+          package: 'web'
 
-      - name: Download and Extract Ren'Py
-        run: |
-          wget https://www.renpy.org/dl/8.2.3/renpy-8.2.3-sdk.tar.bz2
-          tar -xf renpy-8.2.3-sdk.tar.bz2
-          wget https://www.renpy.org/dl/8.2.3/renpy-8.2.3-web.zip
-          unzip -q renpy-8.2.3-web.zip -d renpy-8.2.3-sdk/
-
-      - name: Build Web Distribution
-        run: |
-          cd renpy-8.2.3-sdk
-          ./renpy.sh launcher web_build ../ --dest ../web-dist
-          
       - name: Prepare Web Root
         run: |
           mkdir -p deploy
-          cp -R web-dist/*-web/* deploy/
+          WEB_DIR=$(find ${{ steps.build.outputs.dir }} -maxdepth 1 -type d -name "*-web")
+          cp -r $WEB_DIR/* deploy/
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
