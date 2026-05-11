@@ -187,7 +187,7 @@ label scene_0:
 
     Baloo "Hey, little friend."
 
-    Baloo "(이봐, 꼬마 친구.)"
+    Baloo "(이봐, 모글리)"
     Baloo "You {color=#00ccff}are going to{/color} be great out there. I know it."
     Baloo "(넌 그곳에서 아주 잘 지낼 거야. 난 알아.)"
 
@@ -341,7 +341,7 @@ label scene_a2:
 
     Riya "(모글리! 무서운 소식을 들었어!)"
     Riya "People are saying a huge beast {color=#00ccff}is going to{/color} come to our village!"
-    Riya "(마을 사람들이 거대한 맹수가 마을로 올 거라고 하더라!)"
+    Riya "(마을 사람들이 거대한 호랑이가 마을로 올 거라고 하더라!)"
 
     hide mow01
     show mow04 at fit_ch_left
@@ -350,11 +350,11 @@ label scene_a2:
 
     Mowgli "(...시어칸.)"
     Mowgli "He {color=#00ccff}is going to{/color} try to scare everyone here."
-    Mowgli "(그는 여기 있는 모두를 겁주려 할 거야.)"
+    Mowgli "(그는 여기 있는 모두를 다치게 할 거야.)"
 
     Riya "Are you {color=#00ccff}going to{/color} do something about it?!"
 
-    Riya "(뭔가 할 거야?!)"
+    Riya "(모글리, 뭔가 대책이 있는 거야?!)"
 
     hide mow04
     show mow01 at fit_ch_left
@@ -364,14 +364,14 @@ label scene_a2:
     menu:
         "A) \"I {b}{color=#ffff00}am going to{/color}{/b} warn everyone in the village!\"":
             Mowgli "I {color=#00ccff}am going to{/color} warn everyone in the village!"
-            Mowgli "(마을 사람들에게 모두 경고할 거야!)"
+            Mowgli "(마을 사람들에게 모두 알릴거야!)"
             Riya "Then I {color=#00ccff}am going to{/color} help you!"
             Riya "(그럼 나도 도와줄게!)"
             $ riya_joins = True
 
         "B) \"I {b}{color=#ffff00}am going to{/color}{/b} go find him myself.\"":
             Mowgli "I {color=#00ccff}am going to{/color} go find him myself."
-            Mowgli "(직접 그를 찾아갈 거야.)"
+            Mowgli "(직접 시어 칸을 찾아갈 거야.)"
             Riya "By yourself?! Be careful, Mowgli!"
             Riya "(혼자서?! 조심해, 모글리!)"
             $ riya_joins = False
@@ -447,7 +447,7 @@ label ending_1:
 
     Baloo "We {color=#00ccff}are going to{/color} have SO much fun!"
 
-    Baloo "(우린 정말 즐거운 시간을 보낼 거야!)"
+    Baloo "(이건 정말 재밌을거예요!)"
 
     hide riy01
     hide bal03
@@ -466,9 +466,7 @@ label ending_1:
 
     hide mow06
     Narrator "⭐ THE END ⭐"
-    Narrator "Mowgli became a bridge between two worlds."
     Narrator "(모글리는 두 세계를 잇는 다리가 되었습니다.)"
-    Narrator "Keeping both the jungle and the village in his heart forever."
     Narrator "(정글과 마을 모두를 영원히 마음속에 간직한 채로요.)"
 
     return
@@ -497,11 +495,11 @@ label scene_b1:
 
     Narrator "The bushes shake, and Shere Khan appears..."
 
-    Narrator "(수풀이 흔들리며 Shere Khan이 나타난다…)"
+    Narrator "(수풀이 흔들리며 시어 칸이 나타난다…)"
 
     Shere "Man-cub."
 
-    Shere "(인간의 아이야.)"
+    Shere "(모글리...)"
     Shere "You {color=#00ccff}are going to{/color} be sorry you came back."
     Shere "(이곳에 돌아온 걸 후회하게 될 거다.)"
 
@@ -516,7 +514,7 @@ label scene_b1:
 
     Shere "Then what are you {color=#00ccff}going to{/color} do, little man-cub?"
 
-    Shere "(그럼 어쩔 셈이야, 꼬마 인간?)"
+    Shere "(그럼 어쩔 셈이지?)"
 
     Narrator "💬 What is Mowgli {color=#00ccff}going to{/color} say to Shere Khan? (모글리는 시어칸에게 뭐라고 말할까?)"
 
@@ -567,7 +565,7 @@ label route_bl:
 
     Shere "…What exactly are you {color=#00ccff}going to{/color} do, man-cub?"
 
-    Shere "(…정확히 뭘 할 셈이야, 꼬마 인간?)"
+    Shere "(…정확히 뭘 할 셈이야, 모글리?)"
 
     Narrator "💬 What is Mowgli {color=#00ccff}going to{/color} do to save the jungle? (모글리는 정글을 구하기 위해 무얼 할까?)"
 
@@ -626,7 +624,7 @@ label ending_2:
 
     Mowgli "We {color=#00ccff}are going to{/color} save our home."
 
-    Mowgli "(우리의 집을 구할 거야.)"
+    Mowgli "(우리의 집, 우리의 정글을 구할 거야.)"
 
     hide mow03
     show mow06 at fit_ch
@@ -637,9 +635,7 @@ label ending_2:
 
     hide mow06
     Narrator "⭐ THE END ⭐"
-    Narrator "Mowgli became the protector of the jungle."
     Narrator "(모글리는 정글의 수호자가 되었습니다.)"
-    Narrator "All animals will follow this boy from two worlds."
     Narrator "(두 세계에 속한 이 소년을 모든 동물들이 따르게 될 것입니다.)"
 
     return
@@ -692,7 +688,7 @@ label route_br:
 
     Baloo "(나타나며) Little cub. I {color=#00ccff}am going to{/color} ask you something important."
 
-    Baloo "(꼬마야. 중요한 걸 하나 물어볼게.)"
+    Baloo "(모글리. 중요한 걸 하나 물어볼게.)"
     Baloo "What are you {color=#00ccff}going to{/color} be — a jungle creature, or a human?"
     Baloo "(넌 무엇이 될 거야? 정글의 동물, 아니면 인간?)"
 
@@ -768,9 +764,7 @@ label ending_3:
 
     hide mow06
     Narrator "⭐ THE END ⭐"
-    Narrator "Mowgli did not choose the jungle or the village."
     Narrator "(모글리는 정글도, 마을도 선택하지 않았습니다.)"
-    Narrator "He decided to walk his own path, and that will change everything."
     Narrator "(자신만의 길을 걷기로 했고, 그것이 모든 것을 바꿔놓게 될 것입니다.)"
 
     return
